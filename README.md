@@ -1,6 +1,8 @@
 # p5VN
 A simple visual novel engine coded in p5.js
 ---------------------------------------------------------------------
+Live Demo: https://mlg583.github.io/p5VN/
+
 How to use:
 --------------
 Script.txt 
