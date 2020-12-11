@@ -79,7 +79,7 @@ $if(variableName, trueTag, falseTag)
 
 END
 --------
--Marks the end of the script. Don't forget it!
+-Marks the end of the script. Don't forget it! (The End text displayed is currently not modifyable by the script.)
 
 ---------------------------------------------------------------------------
 
@@ -95,6 +95,10 @@ IN-LINE POSITION UPDATES(&show(POSITION))
 Title Screen
 -------------
 -The title screen path currently must be 'backgrounds/Titlescreen.png' (To be fixed at some point)
+
+-----------------------------------------------------------------------------------------------------
+
+TBD: Remove hardcoded elements (title screen, font, end text)
 
 
 
