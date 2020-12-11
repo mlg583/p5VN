@@ -1,0 +1,162 @@
+﻿$tag(start)
+
+$defineC("NYU-Chan", "chars/nyu_chan", color(84, 28, 137))
+$defineC("Barry", "chars/Barry", color(84, 28, 137))
+$defineImg(Empty,"backgrounds/Empty.png")
+$defineImg(Bedroom,"backgrounds/Bedroom.png")
+
+$bg(Empty) 
+ 
+$show("NYU-Chan", CENTER)
+
+N: This is NYU-Chan.
+
+
+
+N: NYU-Chan is an IDM student at Tandon, and as you know, it's finals season.
+N: Naturally, one would think to make their finals go as smooth as possible.
+
+N: But NYU-Chan goes to Tandon.
+$setSprite("NYU-Chan", 3)
+N: And Tandon students seem to like pain.
+
+$setSprite("NYU-Chan", 1)
+
+NYU-Chan: I had a fantastic idea for my Creative Coding final!
+ 
+N: Oh no.  
+
+$setSprite("NYU-Chan", 2)
+
+NYU-Chan: I made my very own visual novel engine!
+
+$setSprite("NYU-Chan", 1)
+NYU-Chan: I thought it'd be so much fun!
+
+$setSprite("NYU-Chan", 3)
+
+
+N: NYU-Chan thought it'd be fun to code a game engine from scratch in 3 weeks time.
+N: ...despite her less than amazing programming skills.
+
+N: What do you think viewer? Do you think a sane person would attempt to do a project like this?
+
+$menu("JokeMenu", 2, "Yes", afterJokeMenu, "No", afterJokeMenu2a)
+
+$tag(afterJokeMenu)
+N: Oh whoops, sorry I think I loaded the wrong menu.
+N: Try these choices. I think you'll find them more accurate.
+
+$menu("JokeMenu2", 2, "No", afterJokeMenu2a, "Hell No", afterJokeMenu2b)
+
+$tag(afterJokeMenu2a)
+N: I know right? 
+$jump(afterJokeMenu2)
+
+$tag(afterJokeMenu2b)
+N: EXACTLY.
+$jump(afterJokeMenu2)
+
+$tag(afterJokeMenu2)
+N: Anyways... let's walk through the creation of the engine.
+
+$hide("NYU-Chan")
+$bg(none)
+
+N: NYU-Chan started with the basic layout of the Visual Novel engine.
+N: She needed a text box, so using p5.scribble.js, she made one. Like this:
+N:
+N: Cool huh?
+NYU-Chan: Yeah! Then I made a whole parser.
+NYU-Chan: You can't see most of that work... but it's the reason you're reading all of this!
+
+N: That sounds like it was completely beyond the scope of this class!
+
+NYU-Chan: Yup! :D
+
+N: So what did you do next?
+
+$show("NYU-Chan", CENTER)
+$setSprite("NYU-Chan", 2)
+$bg(Empty)
+NYU-Chan: Images!
+
+NYU-Chan: Making me and anyone else show up was hard...
+
+$setSprite("NYU-Chan", 4)
+NYU-Chan: So hard...
+
+N: How so?
+$setSprite("NYU-Chan", 1)
+
+NYU-Chan: Well... the script you're reading right now was input via a text file and processed into engine instructions.
+
+N: Go on.
+
+NYU-Chan: But because images are handled and loaded dynamically in the script, they can't be preloaded. And that causes problems.
+$setSprite("NYU-Chan", 4)
+NYU-Chan: Why must Javascript be asynchronous.
+
+N: Oof.
+$setSprite("NYU-Chan", 1)
+NYU-Chan: But Hey...&show(RIGHT)
+NYU-Chan: Now I can do this!
+$setSprite("NYU-Chan", 2)
+
+$show("Barry", LEFT)
+Barry: Ya like jazz?
+
+N: Why is Barry from The Bee Movie on the screen?
+
+$setSprite("NYU-Chan", 1)
+NYU-Chan: The Bee Movie script was orignally what I used to implement the scripting language for this engine, and Barry's images are still in the files.
+NYU-Chan: Do you like The Bee Movie?
+$menu("BeeMenu", 2, "Yes", yesMovie, "No", noMovie)
+
+$tag(yesMovie)
+$setVar(movieFlag, true)
+$jump(afterMovie)
+
+$tag(noMovie)
+$setVar(movieFlag, false)
+$jump(afterMovie)
+
+$tag(afterMovie)
+
+N: Let's see what you think player. I'll test the engine's variable features.
+
+$if(movieFlag, yesResponse, noResponse)
+
+$tag(yesResponse)
+N: ...
+N: You really like that trash?
+N: How cultured.
+$jump(afterResponse)
+
+$tag(noResponse)
+N: ...
+N: Hey look at you, you don't have bad taste.
+$jump(afterResponse)
+
+$tag(afterResponse)
+N: Okay then, bye Barry!
+$hide("Barry")
+
+N: So what's so great about this engine, NYU-Chan?
+
+$setSprite("NYU-Chan", 2)
+NYU-Chan: Well... it's really easy to use!&show(CENTER)
+
+$setSprite("NYU-Chan", 1)
+
+NYU-Chan: Dialogue is written out like a movie script! And all of the functions start with a $! And even better it is completely controled via a single text file. 
+$setSprite("NYU-Chan", 2)
+NYU-Chan: Refer to the documentation for a list of all of the commands and how they work! With a single file, you can create an entire story-driven game!
+$setSprite("NYU-Chan", 1)
+NYU-Chan: Right now, the script your are reading, has tested out all of the current functionality of this engine. While it's still simple, it's potentially very powerful!
+
+N: You guys can download the source code on Github, feel free to experiment with it on your own!  
+
+END
+
+

@@ -98,7 +98,16 @@ Title Screen
 
 -----------------------------------------------------------------------------------------------------
 
-TBD: Remove hardcoded elements (title screen, font, end text)
+TBD: 
+--------
+Remove hardcoded elements (title screen, font, end text)
+
+-------------------------------------------------------------
+
+Special Thanks:
+------
+p5.clickable: https://github.com/Lartu/p5.clickable
+p5.scribble.js: https://github.com/generative-light/p5.scribble.js/
 
 
 

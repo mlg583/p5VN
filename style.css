@@ -1,0 +1,12 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Press Start 2P', cursive;
+}
+
+canvas {
+    display: block;
+}
