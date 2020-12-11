@@ -3,7 +3,9 @@ A simple visual novel engine coded in p5.js
 ---------------------------------------------------------------------
 How to use:
 --------------
-Script.txt contains all of the instructions for the script!
+Script.txt 
+-----------
+-contains all of the instructions for the script!
 
 Here's an example script!:
 
@@ -12,6 +14,11 @@ N: Hello World!
 END
 
 This will have the Narrator say the line "Hello World".
+If a character named "Bob", has been defined, you can write:
+
+Bob: I'm speaking!
+
+And "Bob" will say the line!
 
 -------------------------------------------------------------------------
 
@@ -80,6 +87,12 @@ $if(variableName, trueTag, falseTag)
 IN-LINE POSITION UPDATES(&show(POSITION))
 ----------
 -can be added after any line of character dialogue to update their position to a given position (LEFT, RIGHT, CENTER)
+
+Title Screen
+-------------
+-The title screen path currently must be 'backgrounds/Titlescreen.png' (To be fixed at some point)
+
+
 
 
 
