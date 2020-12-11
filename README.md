@@ -77,6 +77,10 @@ $if(variableName, trueTag, falseTag)
 ------------
 -A conditional jump. Jumps to trueTag if variableName is true, falseTag if variableName is false
 
+END
+--------
+-Marks the end of the script. Don't forget it!
+
 ---------------------------------------------------------------------------
 
 #COMMENTS
