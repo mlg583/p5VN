@@ -49,7 +49,7 @@ function preload() {
     inputFile = loadStrings("script.txt")
 
     font = loadFont("PressStart2P.ttf")
-    title = loadImage("/backgrounds/Titlescreen.png")
+    title = loadImage("backgrounds/Titlescreen.png")
 }
 
 function initCharArray() {
