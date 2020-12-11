@@ -1,6 +1,6 @@
 ﻿$tag(start)
 
-$defineC("NYU-Chan", "chars/nyu_chan", color(84, 28, 137))
+$defineC("NYU-Chan", "../chars/nyu_chan", color(84, 28, 137))
 $defineC("Barry", "chars/Barry", color(84, 28, 137))
 $defineImg(Empty,"backgrounds/Empty.png")
 $defineImg(Bedroom,"backgrounds/Bedroom.png")
