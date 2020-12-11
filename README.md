@@ -1,10 +1,8 @@
 # p5VN
 A simple visual novel engine coded in p5.js
-
+---------------------------------------------------------------------
 How to use:
 Script.txt contains all of the instructions for the script!
-
-
 
 Here's an example script!:
 
@@ -14,7 +12,7 @@ END
 
 This will have the Narrator say the line "Hello World".
 
-
+-------------------------------------------------------------------------
 
 Commands:
 Commands are lines that begin with the character "$"
@@ -59,7 +57,7 @@ $setVar(variableName, number or bool value)
 
 $if(variableName, trueTag, falseTag)
 -A conditional jump. Jumps to trueTag if variableName is true, falseTag if variableName is false
-
+---------------------------------------------------------------------------
 
 #COMMENTS
 -Any line starting with # is completely ignored
