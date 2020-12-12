@@ -20,9 +20,33 @@ function reset() {
     processedScript = []
     currentIndex = 0
     characters = []
-   
     tags = []
-    
+    menus = []
+
+    cl_mouseWasPressed = false;
+    cl_lastHovered = null;
+    cl_lastClicked = null;
+    cl_clickables = [];
+
+    startButton = new Clickable()
+    startButton.onOutside = function () { startButton.color = '#FFFFFF80' }
+    startButton.onHover = function () { startButton.color = '#FFFFFFC0' }
+
+    startButton.cornerRadius = 10;       //Corner radius of the clickable (float)
+    startButton.strokeWeight = 2;        //Stroke width of the clickable (float)
+    startButton.stroke = "#000000";      //Border color of the clickable (hex number as a string)
+    startButton.text = "";       //Text of the clickable (string)
+    startButton.textColor = "#000000";   //Color of the text (hex number as a string)
+    startButton.textSize = 12;           //Size of the text (integer)
+    startButton.locate(width / 3, .5 * height)
+    startButton.width = (width / 3)
+    startButton.height = ((height - 50) / 5)
+
+    startButton.onRelease = function () {
+        currentIndex = 0
+        gameStarted = true
+    }
+
     canAdvance = true
     enableGUI = true
     enableText = true
@@ -33,16 +57,6 @@ function reset() {
     initCharArray()
     processInputFile()
     loadAllCharacters()
-
-
-
-}
-
-function initMenus() {
-    for (let menu in menus) {
-        menu.everdrawn = false
-
-    }
 }
 
 function preload() {
@@ -899,32 +913,7 @@ function getImageByName(nameString) {
 
 function setup() {
     createCanvas(800, 600);
-    initCharArray()
-    processInputFile()
-    loadAllCharacters()
-
-
-    startButton = new Clickable()
-    startButton.onOutside = function () { startButton.color = '#FFFFFF80' }
-    startButton.onHover = function () { startButton.color = '#FFFFFFC0' }
-
-    startButton.cornerRadius = 10;       //Corner radius of the clickable (float)
-    startButton.strokeWeight = 2;        //Stroke width of the clickable (float)
-    startButton.stroke = "#000000";      //Border color of the clickable (hex number as a string)
-    startButton.text = "";       //Text of the clickable (string)
-    startButton.textColor = "#000000";   //Color of the text (hex number as a string)
-    startButton.textSize = 12;           //Size of the text (integer)
-    startButton.locate(width / 3, .5 * height)
-    startButton.width = (width / 3)
-    startButton.height = ((height - 50) / 5)
-
-    startButton.onRelease = function () {
-        currentIndex = 0
-       
-        gameStarted = true
-    }
-
-
+    reset()
 
     scribble = new Scribble();
     scribble.bowing = 0
