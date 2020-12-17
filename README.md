@@ -103,6 +103,7 @@ Title Screen
 TBD: 
 --------
 Remove hardcoded elements (title screen, font, end text)
+Music Commands
 
 -------------------------------------------------------------
 
