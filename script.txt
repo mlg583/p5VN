@@ -244,11 +244,13 @@ $if(testFlag, flagTrue, flagFalse)
 
 $tag(flagTrue)
 N: Why didn't you pick up the phone?
+$jump(afterCondition)
 
 
 $tag(flagFalse)
 N: Good job picking up the phone!
 
+$tag(afterCondition)
 $bg(Empty)
 $show("NYU-Chan", CENTER)
 
