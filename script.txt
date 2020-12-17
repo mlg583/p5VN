@@ -1,7 +1,7 @@
 ﻿$tag(start)
 
 $defineC("NYU-Chan", "characters/nyu_chan", color(84, 28, 137))
-$defineC("Barry", "characters/Barry", color(84, 28, 137))
+$defineC("Barry", "characters/Barry", color ( 255 , 225 , 100))
 $defineImg(Empty,"backgrounds/Empty.png")
 $defineImg(Bedroom,"backgrounds/Bedroom.png")
 
@@ -10,8 +10,6 @@ $bg(Empty)
 $show("NYU-Chan", CENTER)
 
 N: This is NYU-Chan.
-
-
 
 N: NYU-Chan is an IDM student at Tandon, and as you know, it's finals season.
 N: Naturally, one would think to make their finals go as smooth as possible.
@@ -67,7 +65,7 @@ N: NYU-Chan started with the basic layout of the Visual Novel engine.
 N: She needed a text box, so using p5.scribble.js, she made one. Like this:
 N:
 N: Cool huh?
-NYU-Chan: Yeah! Then I made a whole parser.
+NYU-Chan: Yeah! Then I made a whole parser. It converts the script to code!
 NYU-Chan: You can't see most of that work... but it's the reason you're reading all of this!
 
 N: That sounds like it was completely beyond the scope of this class!
@@ -142,6 +140,119 @@ $tag(afterResponse)
 N: Okay then, bye Barry!
 $hide("Barry")
 
+NYU-Chan: Let's play through the test script I made to program the engine!
+
+$hide("NYU-Chan")
+$bg(none)
+
+N: "THE BEE MOVIE"
+
+$setVar(testFlag, false)
+
+N: ...
+
+$setVar(testFlag, 314)
+
+N: According to all known laws of aviation, there is no way a bee should be able to fly.
+
+$setVar(testFlag, false)
+
+
+N: Its wings are too small to get its fat little body off the ground. 
+
+N: The bee, of course, flies anyway
+
+N: because bees don't care what humans think is impossible.
+
+N: ... 
+
+$bg(Bedroom)
+
+#show command" Shows the specified character at a predefined XY position (LEFT, RIGHT CENTER)
+
+$show("Barry", LEFT)
+
+Barry: Yellow, black. Yellow, black...
+
+#Inline show command(applies to the currently speaking character)
+Barry: Yellow, black. Yellow, black.&show(RIGHT)
+
+#replaces  current character's current sprite with one named "Excited" found in their image directory 
+
+$setSprite("Barry", 2)
+
+Barry: Ooh, black and yellow! Let's shake it up a little.&show(CENTER)
+
+Mom: Barry! Breakfast is ready!
+
+$show("Barry", LEFT)
+
+Barry: Coming!
+
+$hide("Barry")
+
+N: (phone rings)
+
+//$bg(none)
+
+N: Does Barry Answer?
+
+
+#MENU TAG: takes number of options followed by the option text and the corresponding tag to jump to when selected
+
+$menu("YesNoMenu", 2, "Yes", callYes,"No", callNo)
+
+$tag(callNo)
+Barry: Nah, I won't answer
+
+$setVar(testFlag, true)
+
+$jump(afterCall)
+
+
+$show("Barry", LEFT)
+
+$tag(callYes)
+Barry: Oh, hang on a second.
+
+$show("Barry", CENTER)
+
+N: (Barry adjusts his antennas into a headset)
+
+Barry: Hello?
+
+???: Barry?
+
+Barry: Adam?
+
+Adam: Can you believe this is happening?
+
+Barry: I can't believe it. I'll pick you up.
+
+N: (Barry hangs up, and sharpens his stinger)
+
+Barry: Lookin' sharp!
+
+$hide("Barry")
+
+$tag(afterCall)
+
+N: (Barry flies downstairs)
+
+#Conditional Jump
+$if(testFlag, flagTrue, flagFalse)
+
+$tag(flagTrue)
+N: Why didn't you pick up the phone?
+
+
+$tag(flagFalse)
+N: Good job picking up the phone!
+
+$bg(Empty)
+$show("NYU-Chan", CENTER)
+
+
 N: So what's so great about this engine, NYU-Chan?
 
 $setSprite("NYU-Chan", 2)
@@ -156,6 +267,8 @@ $setSprite("NYU-Chan", 1)
 NYU-Chan: Right now, the script your are reading, has tested out all of the current functionality of this engine. While it's still simple, it's potentially very powerful!
 
 N: You guys can download the source code on Github, feel free to experiment with it on your own!  
+
+$tag(endLabel)
 
 END
 
