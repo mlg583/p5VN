@@ -140,7 +140,7 @@ $tag(afterResponse)
 N: Okay then, bye Barry!
 $hide("Barry")
 
-NYU-Chan: Let's play through the test script I made to program the engine!
+NYU-Chan: Let's play through the test script I made to program the engine! I went through this script line by line and coded the parser to make it work!
 
 $hide("NYU-Chan")
 $bg(none)
