@@ -12,7 +12,9 @@ Script.txt
 Here's an example script!:
 
 $tag(start)
+
 N: Hello World!
+
 END
 
 This will have the Narrator say the line "Hello World".
