@@ -915,6 +915,7 @@ function getImageByName(nameString) {
 function setup() {
     createCanvas(800, 600);
     reset()
+	song.playMode('restart')
     song.play()
 
     scribble = new Scribble();
