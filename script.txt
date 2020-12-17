@@ -145,11 +145,11 @@ NYU-Chan: Let's play through the test script I made to program the engine!
 $hide("NYU-Chan")
 $bg(none)
 
-N: "THE BEE MOVIE"
+N: "THE BEE MOVIE - Recreated by NYU-Chan"
 
 $setVar(testFlag, false)
 
-N: ...
+N: ...Oh no.
 
 $setVar(testFlag, 314)
 
@@ -252,6 +252,9 @@ N: Good job picking up the phone!
 $bg(Empty)
 $show("NYU-Chan", CENTER)
 
+
+N: Well that was painful.
+N: Anyways....
 
 N: So what's so great about this engine, NYU-Chan?
 

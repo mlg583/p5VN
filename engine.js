@@ -64,6 +64,7 @@ function preload() {
 
     font = loadFont("PressStart2P.ttf")
     title = loadImage("backgrounds/Titlescreen.png")
+    song = loadSound("song.ogg")
 }
 
 function initCharArray() {
@@ -914,6 +915,7 @@ function getImageByName(nameString) {
 function setup() {
     createCanvas(800, 600);
     reset()
+    song.play()
 
     scribble = new Scribble();
     scribble.bowing = 0
