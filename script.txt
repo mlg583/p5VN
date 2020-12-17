@@ -9,7 +9,7 @@ $bg(Empty)
  
 $show("NYU-Chan", CENTER)
 
-N: This is NYU-Chan.
+N: This is NYU-Chan. 
 
 N: NYU-Chan is an IDM student at Tandon, and as you know, it's finals season.
 N: Naturally, one would think to make their finals go as smooth as possible.
