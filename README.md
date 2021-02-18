@@ -5,6 +5,16 @@ Live Demo: https://mlg583.github.io/p5VN/
 
 How to use:
 --------------
+
+CLONE THE REPO WITH ALL OF THE FILES (Download ZIP and extract p5vn-main) AND HOST ON A WEB SERVER!
+
+FOR QUICK TESTING (REQUIRES PYTHON 3 INSTALLED):
+1) run "python -m http.server" in Powershell or Terminal
+2) Navegate browser to "localhost:8000"
+3) Browse directories to find and open p5vn-main 
+
+
+
 Script.txt 
 -----------
 -contains all of the instructions for the script!
