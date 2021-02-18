@@ -5,14 +5,16 @@ Live Demo: https://mlg583.github.io/p5VN/
 
 How to use:
 --------------
+**Recommended: p5 editor (Chrome or Firefox Users, p5.Sound is broken in Edge?)**
+https://editor.p5js.org/supersmexyhentai/sketches/yFlLoRUEm
 
-CLONE THE REPO WITH ALL OF THE FILES (Download ZIP and extract p5vn-main) AND HOST ON A WEB SERVER!
+*Edit Script.txt to modify the script of the game! Sign into p5 in order to duplicate the project and save your edits!*
 
-FOR QUICK TESTING (REQUIRES PYTHON 3 INSTALLED):
-1) run "python -m http.server" in Powershell or Terminal
-2) Navegate browser to "localhost:8000"
-3) Browse directories to find and open p5vn-main 
+p5VN must be hosted on a web server to function! For offline editing, please clone/download the repo and access the folder via a local web server.
 
+Those with Python 3 installed can easily do so by running "python -m http.server" in your command line and navegating to "localhost:8000". From there, browse to the file path of the p5vn-main folder.  
+
+Errors in the console reporting missing images are normal! The engine attempts to load 10 images per defined character even if there aren't 10 images. This should not have any effect. If sound glitches occur, please refresh the page.  
 
 
 Script.txt 
