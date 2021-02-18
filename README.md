@@ -28,17 +28,28 @@ Script.txt
 
 Here's an example script!:
 
+----------------------------------------------------------------
 $tag(start)
 
 N: Hello World!
 
 END
 
+------------------------------------------------------------
 This will have the Narrator say the line "Hello World".
 If a character named "Bob", has been defined, you can write:
 
+-----------------------
+
+$defineC("Bob", "characters\Bob", color(0,0,0))
+
+$tag(start)
+
 Bob: I'm speaking!
 
+END
+
+------------------
 And "Bob" will say the line!
 
 
