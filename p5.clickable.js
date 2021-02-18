@@ -1,4 +1,4 @@
-﻿//Determines if the mouse was pressed on the previous frame
+//Determines if the mouse was pressed on the previous frame
 var cl_mouseWasPressed = false;
 //Last hovered button
 var cl_lastHovered = null;

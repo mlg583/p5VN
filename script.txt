@@ -1,4 +1,6 @@
-﻿$tag(start)
+#NOTE: ON MY MACHINE, THIS EDITOR DOES NOT RUN IN MICROSOFT EDGE DUE TO ISSUES WITH p5.SOUND. IF THIS HAPPENS TO YOU, CTRL+F FOR "song" IN ENGINE.JS AND COMMENT OUT EACH LINE (SHOULD ONLY BE 3)
+
+$tag(start)
 
 $defineC("NYU-Chan", "characters/nyu_chan", color(84, 28, 137))
 $defineC("Barry", "characters/Barry", color ( 255 , 225 , 100))

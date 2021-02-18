@@ -1,4 +1,4 @@
-﻿//VN ENGINE SCRIPT
+//VN ENGINE SCRIPT by SmexGames
 let inputFile = []
 let processedScript = []
 let currentIndex = 0
@@ -15,6 +15,9 @@ let state = 0;
 let currentBackground
 let variables = new Object
 let gameStarted = false
+let ratio;
+let ratioX
+let ratioY;
 
 function reset() {
     processedScript = []
@@ -161,6 +164,10 @@ class Character {
         if (this.path.length) {
             if (this.currentSprite != 0 && this.sprites[this.currentSprite] != null) {
                 imageMode(CENTER)
+                
+                  this.sprites[this.currentSprite].resize(this.sprites[this.currentSprite].width * ratioX, this.sprites[this.currentSprite].height * ratioY)
+                  
+                
                 image(this.sprites[this.currentSprite], this.xpos, this.ypos)
             }
         }
@@ -406,7 +413,7 @@ class CommandMenu extends ScriptElement {
 
             push()
             textAlign(CENTER, CENTER)
-            textSize(24)
+            textSize(24*ratio)
             text(this.menuItems[i][0], width / 2, 50 + (((height - 50) / this.menuItems.length) * i) + (this.buttons[i].height / 2))
             pop()
         }
@@ -429,11 +436,11 @@ class Dialog extends ScriptElement {
 
         if (this.characterName != "N") {
 
-            textSize(24)
+            textSize(24* ratio)
             var char = getCharacterByName(this.characterName)
             fill(char.charColor)
 
-            text(this.characterName + ":", 20, 420, width / 2, 460)
+            text(this.characterName + ":", 20*ratioX, 420*ratioY, width / 2, 460*ratioY)
 
             if (this.command && this.command.length) {
                 if (this.command.includes("LEFT"))
@@ -444,9 +451,9 @@ class Dialog extends ScriptElement {
                     char.setPos("CENTER")
             }
         }
-        textSize(20)
+        textSize(20* ratioY)
         fill(255)
-        text(this.dialog, 40, 460, 740, height - 40)
+        text(this.dialog, 40*ratioX, 460*ratioY, 740*ratioX, height - 40)
     }
 }
 
@@ -913,7 +920,12 @@ function getImageByName(nameString) {
 
 
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(min(windowWidth,800), min(windowHeight,600));
+    ratioY = height/600
+    ratioX = width/800
+  
+    ratio = ratioY;
+    
     reset()
 	song.playMode('restart')
     song.play()
@@ -940,14 +952,14 @@ function mouseReleased() {
 }
 
 function renderGUI() {
-    strokeWeight(4)
-    scribble.scribbleFilling([20, 20, 780, 780], [450, 590, 590, 450], 2, -20)
+    strokeWeight(4*ratio)
+    scribble.scribbleFilling([20*ratioX, 20*ratioX, 780*ratioX, 780*ratioX], [450*ratioY, 590*ratioY, 590*ratioY, 450*ratioY], 2, -20)
 }
 
 function renderText() {
     fill(255)
     stroke(0)
-    strokeWeight(8)
+    strokeWeight(8*ratio)
     textFont(font)
     textAlign(LEFT)
 
@@ -997,10 +1009,10 @@ function draw() {
         rectMode(CENTER)
         fill(255)
         stroke(0)
-        strokeWeight(8)
+        strokeWeight(8*ratio)
         textFont(font)
 
-        textSize(24)
+        textSize(24*ratio)
         text("Start", width / 2, startButton.y + startButton.height / 2)
         pop()
     }
@@ -1019,5 +1031,9 @@ function clearAllSprites() {
         characters[i].setSprite(0)
         characters[i].lastSprite = 0
     }
+}
+  
+function windowResized() {
+   resizeCanvas(min(windowWidth,800), min(windowHeight,600))
 }
 

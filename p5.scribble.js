@@ -1,4 +1,4 @@
-﻿/*
+/*
 This file contains functions for drawing 2d primitives with a handy sketchy look in p5.js.
 
 Author: Janneck Wullschleger in 07/2016
