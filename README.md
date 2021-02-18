@@ -9,15 +9,18 @@ How to use:
 
 https://editor.p5js.org/supersmexyhentai/sketches/yFlLoRUEm
 
-*Edit Script.txt to modify the script of the game! Sign into p5 in order to duplicate the project and save your edits!*
+*Upload images and Edit Script.txt to modify the script of the game! Sign into p5 in order to duplicate the project and save your edits! (p5vn works at 800x600px resolution)*
 
 p5VN must be hosted on a web server to function! For offline editing, please clone/download the repo and access the folder via a local web server.
 
 Those with Python 3 installed can easily do so by running "python -m http.server" in your command line and navegating to "localhost:8000". From there, browse to the file path of the p5vn-main folder.  
 
-Errors in the console reporting missing images are normal! The engine attempts to load 10 images per defined character even if there aren't 10 images. This should not have any effect. If sound glitches occur, please refresh the page.  
+Errors in the console reporting missing images are normal! The engine attempts to load 10 images per defined character even if there aren't 10 images. This should not have any effect. If sound glitches occur, please refresh the page.
 
 
+
+**DOCUMENTATION**
+---------------------------------------------------------------------
 Script.txt 
 -----------
 -contains all of the instructions for the script!
@@ -105,7 +108,7 @@ END
 -Any line starting with # is completely ignored
 
 
-IN-LINE POSITION UPDATES(&show(POSITION))
+IN-LINE POSITION UPDATES(ie: &show(POSITION))
 ----------
 -can be added after any line of character dialogue to update their position to a given position (LEFT, RIGHT, CENTER)
 
@@ -118,7 +121,8 @@ Title Screen
 TBD: 
 --------
 Remove hardcoded elements (title screen, font, end text)
-Music Commands
+Music Commands (define, stop, play music from the script file)
+
 
 -------------------------------------------------------------
 
