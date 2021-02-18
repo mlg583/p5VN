@@ -137,7 +137,10 @@ Title Screen
 TBD: 
 --------
 Remove hardcoded elements (Font, end text, etc.)
+
 Music Commands (define, stop, play music from the script file)
+
+Fix Scaling
 
 
 -------------------------------------------------------------
