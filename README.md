@@ -41,7 +41,7 @@ Bob: I'm speaking!
 
 And "Bob" will say the line!
 
---------------
+
 
 Commands:
 -------------------------------------------------------
@@ -98,11 +98,15 @@ $if(variableName, trueTag, falseTag)
 ------------
 -A conditional jump. Jumps to trueTag if variableName is true, falseTag if variableName is false
 
+-----------------------------------------------------------------------------------------------------
+Other Features
+--------
+Here's some other functionality possible.
+
 END
 --------
 -Marks the end of the script. Don't forget it! (The End text displayed is currently not modifyable by the script.)
 
----------------------------------------------------------------------------
 
 #COMMENTS
 ------
@@ -115,13 +119,13 @@ IN-LINE POSITION UPDATES(ie: &show(POSITION))
 
 Title Screen
 -------------
--The title screen path currently must be 'backgrounds/Titlescreen.png' (To be fixed at some point)
+-The title screen path must be 'backgrounds/Titlescreen.png'
 
 -----------------------------------------------------------------------------------------------------
 
 TBD: 
 --------
-Remove hardcoded elements (title screen, font, end text)
+Remove hardcoded elements (Font, end text, etc.)
 Music Commands (define, stop, play music from the script file)
 
 
