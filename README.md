@@ -17,10 +17,11 @@ Those with Python 3 installed can easily do so by running "python -m http.server
 
 Errors in the console reporting missing images are normal! The engine attempts to load 10 images per defined character even if there aren't 10 images. This should not have any effect. If sound glitches occur, please refresh the page.
 
-
+--------------
 
 **DOCUMENTATION**
----------------------------------------------------------------------
+--------------
+
 Script.txt 
 -----------
 -contains all of the instructions for the script!
@@ -40,7 +41,7 @@ Bob: I'm speaking!
 
 And "Bob" will say the line!
 
--------------------------------------------------------------------------
+--------------
 
 Commands:
 -------------------------------------------------------
